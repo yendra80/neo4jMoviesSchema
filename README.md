@@ -59,3 +59,27 @@ If you would like to incorporate Neo4j into a larger application or environment 
 By default Neo4j is configured to accept connections from localhost only (127.0.0.1 is the IP address for localhost). This configuration ensures that your Neo4j server is not exposed to the public Internet, and that only users with access to the local system can interact with Neo4j.
 
 To change the network socket that Neo4j uses from localhost to one that other systems can use, you will need to edit the /etc/neo4j/neo4j.conf file. Open the configuration file in your preferred editor and find the dbms.default_listen_address setting. The following example uses nano to edit the file:
+
+  > sudo nano /etc/neo4j/neo4j.conf
+
+Locate the commented out #dbms.default_listen_address=0.0.0.0 line and uncomment it by removing the leading # comment character.
+
+![NetworkConfiguration](https://user-images.githubusercontent.com/54164349/167447442-c58a3936-9e82-47ce-8ddd-22e85d8df9d9.PNG)
+
+By default, the value 0.0.0.0 will bind Neo4j to all available IPv4 interfaces on your system, including localhost. If you would like to limit Neo4j to a particular IP address, for example a private network IP that your servers use for a datapath, specify the IP address that is assigned to your server’s private network interface here.
+
+When you are finished configuring the default IP address that Neo4j will use for connections, save and close neo4j.conf. If you’re using nano, you can do so by pressing CTRL+X, followed by Y and then ENTER.
+
+### 6. Connecting to Neo4j through browser
+
+Neo4j equipped with browser to query graph data and cypher. Connect to Neo4j browser by execute http request on your IP and port 7474 (make sure the port is opened) and enter your neo4j username and password that created previously
+
+![image](https://user-images.githubusercontent.com/54164349/167448353-5a6f9f2b-19c6-486c-876e-366390ae8349.png)
+
+Once login the browser will display similar with bellow and we can play along with the data - create node, create relationship, query graph data and others
+
+![image](https://user-images.githubusercontent.com/54164349/167449198-11c6eecc-f4ed-41a3-886a-abdc2b1bbf96.png)
+
+
+### Conclusion
+You have now installed, configured, and added data to Neo4j on your server. You also optionally configured Neo4j to accept connections from remote systems including browser

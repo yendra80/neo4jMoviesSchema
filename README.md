@@ -1,4 +1,6 @@
-### **Neo4J Installation on Debian based OS**
+## **Set up Neo4j Enterprise on VM**
+
+I set up cloud environment under AWS EC2 with Ubuntu OS to install Neo4j Enterprise Edition with the following major key steps
 ###### Official documentation can be seen from https://neo4j.com/docs/operations-manual/current/installation/linux/debian/
 
 ### 1. Environment Setup
@@ -82,4 +84,7 @@ Once login the browser will display similar with bellow and we can play along wi
 
 
 ### Conclusion
-You have now installed, configured, and added data to Neo4j on your server. You also optionally configured Neo4j to accept connections from remote systems including browser
+You have now installed, configured, and added data to Neo4j on your server. You also optionally configured Neo4j to accept connections from remote systems including browser. Next part would be design the graph schema using arrows.app
+
+
+## **Design Graph Model using arrows.app**

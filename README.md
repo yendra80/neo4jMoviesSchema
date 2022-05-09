@@ -88,3 +88,6 @@ You have now installed, configured, and added data to Neo4j on your server. You 
 
 
 ## **Design Graph Model using arrows.app**
+Arrows.app designated is only for drawing pictures of graphs and get the feel on how the graph data should connected each other.
+
+![image](https://user-images.githubusercontent.com/54164349/167452193-18909e3a-c69a-4558-b65d-d1130b3ad312.png)

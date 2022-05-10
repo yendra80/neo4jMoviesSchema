@@ -215,3 +215,5 @@ Python code will open connection to neo4j database through neo4j protocol with u
   > RETURN p, movie1, coActor, movie2, p2
   
   ![image](https://user-images.githubusercontent.com/54164349/167597303-48907113-afd4-4d4a-a968-40c777e29bef.png)
+  
+  Now we know that Jack Nicholson might be able to introduce between Keanu and Tom Cruise as Jack and Keanue play together in A Few Good Men and Something's Gotta Give

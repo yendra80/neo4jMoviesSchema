@@ -169,7 +169,7 @@ Python code will open connection to neo4j database through neo4j protocol with u
 
   Once python code successfuly executed we can start explore the node and their relationship in the graph
   
-## **Graph Exploration using cypher queries**
+## **Graph Exploration using cypher queries use Neo4j Browser**
   
   #### Schema checking and monitor the data loaded in the Neo4j database
   Let's get back to Neo4j browswer and do schema checking by execute _call db.schema.visualization()_
@@ -182,3 +182,7 @@ Python code will open connection to neo4j database through neo4j protocol with u
   ![image](https://user-images.githubusercontent.com/54164349/167578826-1a07d606-d1df-49fc-b8e4-8b2878c71528.png)
 
 
+  #### Which movies that Keanue Reeves played  
+  We can retrieve all his movies by starting from the Keanue Reeves node and following the ACTED_IN relationships. The results should look like a graph.
+
+  ![image](https://user-images.githubusercontent.com/54164349/167583287-b8abbf4c-1290-4401-8f61-a94cfb9494ec.png)

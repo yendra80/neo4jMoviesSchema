@@ -173,11 +173,12 @@ Python code will open connection to neo4j database through neo4j protocol with u
   
   #### Schema checking and monitor the data loaded in the Neo4j database
   Let's get back to Neo4j browswer and do schema checking by execute _call db.schema.visualization()_
+  We can see there are Person node who contain 2 labels: Actor & Director, and Movie node that connected to Person by 2 relationship (ACTED_IN and DIRECTED). 
   
   ![db schema visualization](https://user-images.githubusercontent.com/54164349/167576301-ef20e77b-3794-49be-9a3e-56e986a2c0ae.PNG)
   
-  We can see there are Person node who contain 2 labels: Actor & Director, and Movie node that connected to Person by 2 relationship (ACTED_IN and DIRECTED). Let see the total data loaded to Neo4j to reconcile the data with the source
+  Let see the total data loaded to Neo4j to reconcile the data with the source
   
-  ![OverallNumber](https://user-images.githubusercontent.com/54164349/167577732-9f1f1f9d-68ef-489a-bad0-410c000e8f05.PNG)
+  ![image](https://user-images.githubusercontent.com/54164349/167578826-1a07d606-d1df-49fc-b8e4-8b2878c71528.png)
 
 

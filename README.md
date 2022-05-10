@@ -138,3 +138,11 @@ Even relationship can have property as well. In this case the individual person 
 Arrows.app designated is only for drawing pictures of graphs and get the feel on how the graph data should connected each other. The complete view in arrows.app will similar to bellow:
 
 ![image](https://user-images.githubusercontent.com/54164349/167526229-ab99ca0d-de18-48c8-a800-236eeac35993.png)
+
+## **Ingest data based on the data model using Python**
+Neo4j provides drivers which allow you to make a connection to the database and develop applications which create, read, update, and delete information from the graph
+
+#### Neo4j Python Driver
+Initially we need to install Neo4j driver for Python
+The Neo4j Python driver is officially supported by Neo4j and connects to the database using the binary protocol. It aims to be minimal, while being idiomatic to Python.
+  > pip install neo4j

@@ -196,17 +196,33 @@ Python code will open connection to neo4j database through neo4j protocol with u
   ![image](https://user-images.githubusercontent.com/54164349/167585623-8863cce0-de08-41e9-82f7-0e381b2bda2a.png)
   
   
-  #### Collaborative Filtering - Who are the actors may not worked with Keanu but connected through his co Actor so have possibility to collaborate in the future
+  #### Who are the actors may not worked with Keanu but connected through his co Actor so have possibility to collaborate in the future -  Collaborative Filtering
   > MATCH (p:Person {name: 'Keanu Reeves'})-[:ACTED_IN]->(movie1:Movie)<-[:ACTED_IN]-(coActor:Person)-[:ACTED_IN]->(movie2:Movie)<-[:ACTED_IN]-(coCoActor:Person)
   > WHERE p <> coCoActor
+  >
   > AND NOT (p)-[:ACTED_IN]->(:Movie)<-[:ACTED_IN]-(coCoActor)
-  > return coCoActor.name, count(coCoActor) as Freq
-  > order by Freq desc
-  > limit 5
+  >
+  > RETURN coCoActor.name, count(coCoActor) as Freq
+  > 
+  > ORDER BY Freq desc
+  > 
+  > LIMIT 5
 
   ![image](https://user-images.githubusercontent.com/54164349/167595395-2ee624da-f2bf-40ee-840b-43a4af60847d.png)
   
-  Alternatively we can see through the graph
+  Alternatively we can see through the graph to see overall relationship
   
   ![image](https://user-images.githubusercontent.com/54164349/167595574-e775607d-c38b-483d-b7b6-56be3a569185.png)
 
+
+  #### Exploring the Paths between Keanu Reeves and Tom Cruise
+  
+  Throught the table, we can see Tom Cruise have the heighest frequency of occurences become co-co-actor between Keanue Reeves and his co Actor. Now we need to see which movies and actors between Keanue Reeves and Tom Cruise so h/she can introduce them
+  
+  > MATCH (p:Person {name: 'Keanu Reeves'})-[:ACTED_IN]->(movie1:Movie)<-[:ACTED_IN]-(coActor:Person)-[:ACTED_IN]->(movie2:Movie)<-[:ACTED_IN]-(p2:Person {name: 'Tom Cruise'})
+  > 
+  > WHERE NOT (p)-[:ACTED_IN]->(:Movie)<-[:ACTED_IN]-(p2)
+  > 
+  > RETURN p, movie1, coActor, movie2, p2
+  
+  ![image](https://user-images.githubusercontent.com/54164349/167597303-48907113-afd4-4d4a-a968-40c777e29bef.png)

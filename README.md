@@ -166,3 +166,11 @@ Python code will open connection to neo4j database through neo4j protocol with u
   > 
   > password = "<password provided>"
   > 
+
+  Once python code successfuly executed we can start explore the node and their relationship in the graph
+  
+## **Graph Exploration using cypher queries**
+  
+  #### Schema checking and monitor the data loaded in the Neo4j database
+  Let's get back to Neo4j browswer and do schema checking by execute > call db.schema.visualization()
+  

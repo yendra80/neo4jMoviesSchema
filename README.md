@@ -151,9 +151,11 @@ Install the Neo4j Driver using pip:
 #### Run python program to load 3 datasets - Actor, Director and Movie
 3 python code was setup with the following purposes: LoadMovies.py will load and create the node for movie data set, LoadActors.py will create the Person node, Actors label and create relationship between Person, Actors & Movie node. 
 
-Python code will open connection to neo4j database through neo4j protocol with user and password setup previously. 
-
 Use the following command to run code:
   > python LoadMovies.py
+  > 
   > python LoadActors.py
+  > 
   > python LoadDirectors.py
+
+Python code will open connection to neo4j database through neo4j protocol with user and password setup previously. 

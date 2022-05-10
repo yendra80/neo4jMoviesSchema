@@ -22,7 +22,7 @@
 I set up cloud environment under AWS EC2 with Ubuntu OS to install Neo4j Enterprise Edition with the following major key steps
 ###### Official documentation can be seen from https://neo4j.com/docs/operations-manual/current/installation/linux/debian/
 
-### 1. Environment Setup
+#### 1. Environment Setup
 There are 2 items need to be checked on environment
 - An OpenJDK Java 11 runtime is installed or available through your package manager.
 - The repository containing the Neo4j Debian package is known to the package manager.
@@ -40,8 +40,8 @@ There are 2 items need to be checked on environment
   >
   >sudo apt-get update
 
-### 2. Installation
-There are 2 types of Neo4J: Community Edition and Enterprise Edition. When installing Neo4j Enterprise Edition, you will be prompted to accept the license agreement. Once the license agreement is accepted installation begins.
+#### 2. Installation
+There are 2 types of Neo4J: Community Edition and Enterprise Edition. When installing Neo4j Enterprise Edition, you will be prompted to accept the license agreement. Once the license agreement is accepted installation begins. For this exercise i choose Neo4j Enterprise Edition
 
     To install Neo4j Community Edition:
     >sudo apt-get install neo4j=1:4.4.6
@@ -49,20 +49,23 @@ There are 2 types of Neo4J: Community Edition and Enterprise Edition. When insta
     To install Neo4j Enterprise Edition:
     >sudo apt-get install neo4j-enterprise=1:4.4.6
 
-### 3. Neo4J Instance Checking
+#### 3. Neo4J Instance Checking
 Once the installation process is complete, Neo4j should be running. However, it is not set to start on a reboot of your system. So the last setup step is to enable it as a service and then start it:
+    
     > sudo systemctl enable neo4j.service
 
   Now start the service if it is not already running:
+    
     > sudo systemctl start neo4j.service
 
   After completing all of these steps, examine Neo4j’s status using the systemctl command:
+    
     > sudo systemctl status neo4j.service
 
   Output will similar to the following:
   ![image](https://user-images.githubusercontent.com/54164349/167444342-100d3ff8-82e4-4d51-bb50-3173e2b00c90.png)
 
-### 4. Connecting to Neo4j through Cypher Shell
+#### 4. Connecting to Neo4j through Cypher Shell
 To interact with Neo4j on the command line, use the cypher-shell utility. Invoke the utility like this:
     > cypher-shell
 
@@ -74,7 +77,7 @@ You can exit from cypher shell command line by type :exit
 
 ![CypherExit](https://user-images.githubusercontent.com/54164349/167446432-180268f2-0ced-49ba-af29-b6e0847e6d0b.PNG)
 
-### 5. Configuring Neo4j for Remote Access
+#### 5. Configuring Neo4j for Remote Access
 If you would like to incorporate Neo4j into a larger application or environment that uses multiple servers, then you will need to configure it to accept connections from other systems. In this step you will configure Neo4j to allow remote connections, and you will also add firewall rules to restrict which systems can connect to your Neo4j server.
 
 By default Neo4j is configured to accept connections from localhost only (127.0.0.1 is the IP address for localhost). This configuration ensures that your Neo4j server is not exposed to the public Internet, and that only users with access to the local system can interact with Neo4j.
@@ -91,7 +94,7 @@ By default, the value 0.0.0.0 will bind Neo4j to all available IPv4 interfaces o
 
 When you are finished configuring the default IP address that Neo4j will use for connections, save and close neo4j.conf. If you’re using nano, you can do so by pressing CTRL+X, followed by Y and then ENTER.
 
-### 6. Connecting to Neo4j through browser
+#### 6. Connecting to Neo4j through browser
 
 Neo4j equipped with browser to query graph data and cypher. Connect to Neo4j browser by execute http request on your IP and port 7474 (make sure the port is opened) and enter your neo4j username and password that created previously
 
@@ -102,22 +105,36 @@ Once login the browser will display similar with bellow and we can play along wi
 ![image](https://user-images.githubusercontent.com/54164349/167449198-11c6eecc-f4ed-41a3-886a-abdc2b1bbf96.png)
 
 
-### Conclusion
+#### Conclusion
 You have now installed, configured, and added data to Neo4j on your server. You also optionally configured Neo4j to accept connections from remote systems including browser. Next part would be design the graph schema using arrows.app
+
 
 
 ## **Design Graph Model using arrows.app**
 
 For this assignment, i choose the movies dataset that can be obtain from (https://gist.github.com/maruthiprithivi/23a210f5c0dc7ba53ac986dfe6f38943) or from official Neo4j blog & academy. I stored in my github as well for data upload and other reference (/datasets/movies)
 
-Arrows.app designated is only for drawing pictures of graphs and get the feel on how the graph data should connected each other.
-
 For movies design, there are 2 nodes that will be implemented
-  - Person
-  - Movie. 
+  > - Person
+  > - Movie 
 
-Concept of Graph Database is data are connected so data need to have relationship. Person and Movie have 2 relationship based on the data that we used.
-  - ACTED_IN
-  - DIRECTED
+Person node will have 2 labels to distinguish their characters Actors and Producer
 
-![image](https://user-images.githubusercontent.com/54164349/167452193-18909e3a-c69a-4558-b65d-d1130b3ad312.png)
+Concept of Graph Database is data are connected so data need to have relationship. Person and Movie have 2 relationship based on the data that we used and we can name it by use standardize verb
+  > - ACTED_IN
+  > - DIRECTED
+
+Person will have 2 properties to store additional information of each person
+  > - name
+  > - born
+
+While movie have 3 properies for this case
+  > - title
+  > - released
+  > - tagline
+
+Even relationship can have property as well. In this case the individual person will have the role in the movie that they played. So we need to add property name roles in the relationship.
+
+Arrows.app designated is only for drawing pictures of graphs and get the feel on how the graph data should connected each other. The complete view in arrows.app will similar to bellow:
+
+![image](https://user-images.githubusercontent.com/54164349/167526229-ab99ca0d-de18-48c8-a800-236eeac35993.png)

@@ -60,8 +60,13 @@
         "y": -52
       },
       "caption": "Person",
-      "style": {},
-      "labels": [],
+      "style": {
+        "label-position": "inside"
+      },
+      "labels": [
+        "Actor",
+        "Producer"
+      ],
       "properties": {
         "name": "String",
         "Born": "Long"

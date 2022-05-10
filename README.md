@@ -143,6 +143,17 @@ Arrows.app designated is only for drawing pictures of graphs and get the feel on
 Neo4j provides drivers which allow you to make a connection to the database and develop applications which create, read, update, and delete information from the graph
 
 #### Neo4j Python Driver
-Initially we need to install Neo4j driver for Python
-The Neo4j Python driver is officially supported by Neo4j and connects to the database using the binary protocol. It aims to be minimal, while being idiomatic to Python.
+Initially we need to install Neo4j driver for Python. The Neo4j Python driver is officially supported by Neo4j and connects to the database using the binary protocol. It aims to be minimal, while being idiomatic to Python.
+
+Install the Neo4j Driver using pip:
   > pip install neo4j
+
+#### Run python program to load 3 datasets - Actor, Director and Movie
+3 python code was setup with the following purposes: LoadMovies.py will load and create the node for movie data set, LoadActors.py will create the Person node, Actors label and create relationship between Person, Actors & Movie node. 
+
+Python code will open connection to neo4j database through neo4j protocol with user and password setup previously. 
+
+Use the following command to run code:
+  > python LoadMovies.py
+  > python LoadActors.py
+  > python LoadDirectors.py

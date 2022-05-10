@@ -92,7 +92,7 @@ Locate the commented out #dbms.default_listen_address=0.0.0.0 line and uncomment
 
 By default, the value 0.0.0.0 will bind Neo4j to all available IPv4 interfaces on your system, including localhost. If you would like to limit Neo4j to a particular IP address, for example a private network IP that your servers use for a datapath, specify the IP address that is assigned to your server’s private network interface here.
 
-When you are finished configuring the default IP address that Neo4j will use for connections, save and close neo4j.conf. If you’re using nano, you can do so by pressing CTRL+X, followed by Y and then ENTER.
+When you are finished configuring the default IP address that Neo4j will use for connections, save and close neo4j.conf. You might need to restart neo4j instance so  the configuration take effect by execute sudo systemctl restart neo4j.service
 
 #### 6. Connecting to Neo4j through browser
 

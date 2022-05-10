@@ -108,10 +108,16 @@ You have now installed, configured, and added data to Neo4j on your server. You 
 
 ## **Design Graph Model using arrows.app**
 
-For this assignment, i choose the movies dataset that can be obtain from (https://gist.github.com/maruthiprithivi/23a210f5c0dc7ba53ac986dfe6f38943) or from official Neo4j blog & academy. I stored in my github as well for data upload and other reference.
+For this assignment, i choose the movies dataset that can be obtain from (https://gist.github.com/maruthiprithivi/23a210f5c0dc7ba53ac986dfe6f38943) or from official Neo4j blog & academy. I stored in my github as well for data upload and other reference (/datasets/movies)
 
 Arrows.app designated is only for drawing pictures of graphs and get the feel on how the graph data should connected each other.
 
-For movies design, there are 2 nodes - Person 
+For movies design, there are 2 nodes that will be implemented
+  - Person
+  - Movie. 
+
+Concept of Graph Database is data are connected so data need to have relationship. Person and Movie have 2 relationship based on the data that we used.
+  - ACTED_IN
+  - DIRECTED
 
 ![image](https://user-images.githubusercontent.com/54164349/167452193-18909e3a-c69a-4558-b65d-d1130b3ad312.png)

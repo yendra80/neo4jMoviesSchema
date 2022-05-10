@@ -186,3 +186,7 @@ Python code will open connection to neo4j database through neo4j protocol with u
   We can retrieve all his movies by starting from the Keanue Reeves node and following the ACTED_IN relationships. The results should look like a graph.
 
   ![image](https://user-images.githubusercontent.com/54164349/167583287-b8abbf4c-1290-4401-8f61-a94cfb9494ec.png)
+
+  #### Who are the colleagues (co-actors) played with Keanue Reeves in his movies
+
+  ![image](https://user-images.githubusercontent.com/54164349/167585623-8863cce0-de08-41e9-82f7-0e381b2bda2a.png)

@@ -50,7 +50,9 @@
       > sudo systemctl status neo4j.service
 
     Output will similar to the following:
-    ![image](https://user-images.githubusercontent.com/54164349/167444342-100d3ff8-82e4-4d51-bb50-3173e2b00c90.png)
+
+![InstanceStarted](https://user-images.githubusercontent.com/54164349/167605678-8c9d0f26-b7d2-42a4-b774-aee2a6b82f7b.PNG)
+
 
   #### 4. Connecting to Neo4j through Cypher Shell
   To interact with Neo4j on the command line, use the cypher-shell utility. Invoke the utility like this:
@@ -58,7 +60,7 @@
 
   When you first invoke the shell, you will login using the default administrative neo4j user and neo4j password combination. Once you are authenticated, Neo4j will prompt you to change the administrator password. Once you change your password you can re-login to the cypher-shell again with the new password
 
-    ![CypherShell](https://user-images.githubusercontent.com/54164349/167445701-f122bac7-25a0-442c-b2f3-595fcd4f1421.PNG)
+![CypherShell](https://user-images.githubusercontent.com/54164349/167445701-f122bac7-25a0-442c-b2f3-595fcd4f1421.PNG)
 
   You can exit from cypher shell command line by type :exit
 

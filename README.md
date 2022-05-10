@@ -189,4 +189,6 @@ Python code will open connection to neo4j database through neo4j protocol with u
 
   #### Who are the colleagues (co-actors) played with Keanue Reeves in his movies
 
+  ![image](https://user-images.githubusercontent.com/54164349/167587728-83643b86-3d77-48e2-a23e-bcd5ffb7c6d9.png)
+
   ![image](https://user-images.githubusercontent.com/54164349/167585623-8863cce0-de08-41e9-82f7-0e381b2bda2a.png)

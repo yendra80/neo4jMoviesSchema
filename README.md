@@ -194,3 +194,19 @@ Python code will open connection to neo4j database through neo4j protocol with u
   ![image](https://user-images.githubusercontent.com/54164349/167587728-83643b86-3d77-48e2-a23e-bcd5ffb7c6d9.png)
 
   ![image](https://user-images.githubusercontent.com/54164349/167585623-8863cce0-de08-41e9-82f7-0e381b2bda2a.png)
+  
+  
+  #### Collaborative Filtering - Who are the actors may not worked with Keanu but connected through his co Actor so have possibility to collaborate in the future
+  > MATCH (p:Person {name: 'Keanu Reeves'})-[:ACTED_IN]->(movie1:Movie)<-[:ACTED_IN]-(coActor:Person)-[:ACTED_IN]->(movie2:Movie)<-[:ACTED_IN]-(coCoActor:Person)
+  > WHERE p <> coCoActor
+  > AND NOT (p)-[:ACTED_IN]->(:Movie)<-[:ACTED_IN]-(coCoActor)
+  > return coCoActor.name, count(coCoActor) as Freq
+  > order by Freq desc
+  > limit 5
+
+  ![image](https://user-images.githubusercontent.com/54164349/167595395-2ee624da-f2bf-40ee-840b-43a4af60847d.png)
+  
+  Alternatively we can see through the graph
+  
+  ![image](https://user-images.githubusercontent.com/54164349/167595574-e775607d-c38b-483d-b7b6-56be3a569185.png)
+

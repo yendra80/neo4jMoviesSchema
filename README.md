@@ -161,6 +161,8 @@ Use the following command to run code:
 Python code will open connection to neo4j database through neo4j protocol with user and password setup previously. URL might need to be changed to adapt with new environment by changed the following connection string:
 
   > uri = "neo4j://3.83.97.78"
+  > 
   > user = "neo4j"
-  > password = <password provided>
-  > app = LoadActors(uri, user, password)
+  > 
+  > password = "<password provided>"
+  > 

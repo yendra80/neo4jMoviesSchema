@@ -1,3 +1,22 @@
+## **Instructions:**
+- Set up Neo4j Enterprise (Docker / VM). 
+- Model any of the below datasets from Tabular to Graph using arrows.app and share the JSON export or URL of the data model.
+- Write a graph-enabled application using JavaScript / Python / Go / .Net / Java to ingest data based on the data model.
+- Write some exploratory Cypher queries to look at some patterns. You may use Neo4j Browser to execute your queries. You are also encouraged to look into other Neo4j - tools available such as Bloom, Graph Data Science and NeoDash, however primarily the focus must be on Cypher.
+- Document all of the above in a README.md file with the code base and share it through a public GitHub repository.
+
+## Data:
+- Social Network Graph (https://gist.github.com/maruthiprithivi/10b456c74ba99a35a52caaffafb9d3dc)
+- North Wind (https://gist.github.com/maruthiprithivi/f11bf40b558879aca0c30ce76e7dec98)
+- Movies (https://gist.github.com/maruthiprithivi/23a210f5c0dc7ba53ac986dfe6f38943)
+
+## Useful Resources:
+- Neo4j Graph Academy
+- Neo4j YouTube Channel
+- Neo4j Developer Blog
+- Neo4j Developer Docs
+
+
 ## **Set up Neo4j Enterprise on VM**
 
 I set up cloud environment under AWS EC2 with Ubuntu OS to install Neo4j Enterprise Edition with the following major key steps

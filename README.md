@@ -30,26 +30,24 @@
   #### 2. Installation
   There are 2 types of Neo4J: Community Edition and Enterprise Edition. When installing Neo4j Enterprise Edition, you will be prompted to accept the license agreement. Once the license agreement is accepted installation begins. For this exercise i choose Neo4j Enterprise Edition
 
-      To install Neo4j Community Edition:
-      >sudo apt-get install neo4j=1:4.4.6
-
-      To install Neo4j Enterprise Edition:
-      >sudo apt-get install neo4j-enterprise=1:4.4.6
+  To install Neo4j Enterprise Edition:
+  
+    sudo apt-get install neo4j-enterprise=1:4.4.6
 
   #### 3. Neo4J Instance Checking
   Once the installation process is complete, Neo4j should be running. However, it is not set to start on a reboot of your system. So the last setup step is to enable it as a service and then start it:
+  
+    sudo systemctl enable neo4j.service
 
-      > sudo systemctl enable neo4j.service
+  Now start the service if it is not already running:
 
-    Now start the service if it is not already running:
+    sudo systemctl start neo4j.service
 
-      > sudo systemctl start neo4j.service
+  After completing all of these steps, examine Neo4j’s status using the systemctl command:
 
-    After completing all of these steps, examine Neo4j’s status using the systemctl command:
+    sudo systemctl status neo4j.service
 
-      > sudo systemctl status neo4j.service
-
-    Output will similar to the following:
+  Output will similar to the following:
 
 ![InstanceStarted](https://user-images.githubusercontent.com/54164349/167605678-8c9d0f26-b7d2-42a4-b774-aee2a6b82f7b.PNG)
 

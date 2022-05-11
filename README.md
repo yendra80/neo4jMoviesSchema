@@ -101,13 +101,13 @@
 
 ## **Design Graph Model using arrows.app**
 
-For this assignment, i choose the movies dataset that can be obtain from (https://gist.github.com/maruthiprithivi/23a210f5c0dc7ba53ac986dfe6f38943) or from official Neo4j blog & academy. I stored in my github as well for data upload and other reference (/datasets/movies)
+For this assignment, i choose the movies dataset and I stored in my github as well ([/datasets/movies](/datasets/movies))
 
 For movies design, there are 2 nodes that will be implemented
   > - Person
   > - Movie 
 
-Person node will have 2 labels to distinguish their characters Actors and Producer
+Person node will have 2 labels to distinguish their characters: Actors and Producer
 
 Concept of Graph Database is data are connected so data need to have relationship. Person and Movie have 2 relationship based on the data that we used and we can name it by use standardize verb
   > - ACTED_IN

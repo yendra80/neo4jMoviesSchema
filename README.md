@@ -18,8 +18,8 @@
     >echo "deb http://httpredir.debian.org/debian stretch-backports main" | sudo tee -a /etc/apt/sources.list.d/stretch-backports.list 
     >
     >sudo apt-get update
-    >
     >sudo apt-get install openjdk-11-jre
+
 
     ###### Add Neo4j Repository
     To use the repository for generally available versions of Neo4j, run:
